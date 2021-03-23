@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'receita',
+    'pessoas',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +123,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'core_receita/static')
 ]
+
+#media
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+STATIC_URL = '/media/'
