@@ -20,3 +20,16 @@ def receita(request, receita_id):
     }
 
     return render(request, 'receita.html', dados)
+
+
+def buscar(request):
+    receitas = Receita.objects.order_by('-data_receita').filter(publicada=True)
+    if 'buscar' in request.GET:
+        query = request.GET['buscar']
+        if query:
+            receitas = receitas.filter(nome__icontains=query)
+    print(receitas)
+    dados = {
+        'receitas': receitas
+    }
+    return render(request, 'buscar.html', dados)

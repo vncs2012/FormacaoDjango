@@ -7,12 +7,7 @@
         <img src="{% static 'img/core-img/pizza.png' %}" alt="">
     </div>
 
-    <!-- Search Wrapper -->
-    <div class="search-wrapper">
-        <!-- Close Btn -->
-        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
-
-     {% include 'partials/_busca.html' %}
+    {% include 'partials/_busca.html' %}
 
     {% include 'partials/_menu.html' %}
 
@@ -41,7 +36,7 @@
                 </div>
                 {% endfor %} 
                 {% else %}
-                      <div class="col-12 col-sm-6 col-lg-4">
+                   <div class="col-12 col-sm-6 col-lg-4">
                       <p>Receita nao encontrada</p>
                       </div>
                 {% endif %}
