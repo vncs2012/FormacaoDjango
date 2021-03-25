@@ -1,11 +1,11 @@
 from django.db import models
 from datetime import datetime
-from pessoas.models import Pessoa
+from django.contrib.auth.models import User
 
 
 class Receita(models.Model):
-    pessoa = models.ForeignKey(Pessoa, verbose_name=(
-        "nome"), on_delete=models.CASCADE)
+    pessoa = models.ForeignKey(User, verbose_name=(
+        "username"), on_delete=models.CASCADE)
     nome = models.CharField(
         'Nome Receita', max_length=200, blank=False, null=True)
     ingredientes = models.TextField('Ingredientes')
