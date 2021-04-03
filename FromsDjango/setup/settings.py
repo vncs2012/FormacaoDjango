@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'passagens',
+    'tempus_dominus',
+    'widget_tweaks'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +123,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+TEMPUS_DOMINUS_LOCALIZE = True
